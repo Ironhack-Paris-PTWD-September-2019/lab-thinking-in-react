@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ProductRow from './ProductRow';
 
-class App extends Component {
+class ProductTable extends Component {
   render() {
     return (
       <div>
