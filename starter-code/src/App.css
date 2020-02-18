@@ -1,28 +1,55 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+table {
+  margin-top: 1em;
+  width: 80%;
+  border-collapse: collapse;
 }
 
-.App-title {
-  font-size: 1.5em;
+td {
+  border-top: 1px solid #e8ecef;
+  border-bottom: 1px solid #e8ecef;
 }
 
-.App-intro {
-  font-size: large;
+table td {
+  height: 2em;
+  font-size: 1em;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input[type="text"] {
+  height: 2.8em;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  width: 60%;
+  margin: 1em auto;
+}
+.checkbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.8em;
+  height: 20px;
+  width: 20px;
+}
+
+thead {
+  height: 2em;
+  text-align: center;
+  background-color: #e8ecef;
 }
