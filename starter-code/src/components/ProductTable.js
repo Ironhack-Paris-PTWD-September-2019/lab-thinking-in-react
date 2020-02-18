@@ -6,7 +6,7 @@ class ProductTable extends Component {
   render() {
     console.log("FP: ", this.props.products)
     return (
-      <div style={{marginLeft:'30%'}}>
+      <div style={{ marginLeft: '30%' }}>
         <table>
           <thead>
             <tr>
@@ -17,10 +17,10 @@ class ProductTable extends Component {
           <tbody>
             {this.props.products.data.map((product, i) => {
               return (
-                <ProductRow product={product} />
+                <ProductRow key={product.id} product={product} />
               )
             })}
-            
+
           </tbody>
         </table>
 

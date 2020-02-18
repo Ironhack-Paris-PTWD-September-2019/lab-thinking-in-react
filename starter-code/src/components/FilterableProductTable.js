@@ -8,7 +8,7 @@ class FilterableProductTable extends Component {
     console.log("FPT:", this.props.products)
     return (
       <div>
-        < SearchBar />
+        < SearchBar products={this.props.products} />
         < ProductTable products={this.props.products} />
       </div>
     );
