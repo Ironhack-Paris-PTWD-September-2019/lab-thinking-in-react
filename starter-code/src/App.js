@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>IronStore</h1>
-        <FilterableProductTable product={ this.state.json } />  
+        <FilterableProductTable products={ this.state.json } />  
       </div>
     );
   }

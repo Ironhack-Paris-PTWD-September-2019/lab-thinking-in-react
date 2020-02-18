@@ -5,14 +5,26 @@ import ProductTable from './ProductTable';
 
 class FilterableProductTable extends Component {
 
+    state = {
+        search: ''
+    }
+
+    updateTable = (value) => {
+        this.setState({
+            search: value
+        })
+    }
+
+    
 
     render() {
-
+        console.log("FPT ", this.props)
+        const filteredProducts = this.props.products.data.filter(product => product.name.includes(this.state.search));
         return (
             <div> 
                 <h1>FilterableProductTable</h1>
-                <SearchBar />
-                <ProductTable />
+                <SearchBar updateTable={this.updateTable} value={this.state.search} />
+                <ProductTable products={filteredProducts} />
             </div>
         );
     }
