@@ -1,10 +1,14 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 
 class ProductRow extends Component {
-  render () {
+  render() {
+    console.log(this.props)
     return (
       <div>
-        ProductRow
+        <tr>
+          <td style={!this.props.product.stocked ? { color: 'red' } : {}}>{this.props.product.name}</td>
+          <td>{this.props.product.price}</td>
+        </tr>
       </div>
     )
   }

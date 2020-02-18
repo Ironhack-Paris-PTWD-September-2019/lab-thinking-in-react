@@ -5,10 +5,11 @@ import ProductTable from './ProductTable';
 
 class FilterableProductTable extends Component {
   render() {
+    console.log("FPT:", this.props.products)
     return (
       <div>
         < SearchBar />
-        < ProductTable />
+        < ProductTable products={this.props.products} />
       </div>
     );
   }
