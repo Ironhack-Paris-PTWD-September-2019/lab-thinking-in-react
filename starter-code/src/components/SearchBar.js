@@ -6,7 +6,12 @@ class SearchBar extends React.Component {
         return (
         
         <div className="SearchBar">
-            <input type="search" onChange={(e) => this.props.updateTable(e.target.value)} value={this.props.value} />
+            <h3>Search</h3>
+            <input className="searchbar" type="search" name="search" onChange={(event) => this.props.updateTableSearch(event.target.value)} value={this.props.search} />
+            
+            <label>
+                <input className="check" type="checkbox" name="stock" onChange={(event) => this.props.updateTableStock(event.target.value)} value={this.props.stock} />Only show products on stock
+            </label>
         </div>);
     }
 }

@@ -27,7 +27,49 @@
   to { transform: rotate(360deg); }
 }
 
-/* .titlePR {
-  display: flex;
 
-} */
+.SearchBar {
+  display : flex;
+  flex-direction: column;
+}
+
+.searchbar {
+  margin-top: 0.5em;
+  margin-left:auto;
+  margin-right: auto;
+  width: 95vw;
+  height: 4em;
+  border: 1px solid #E7ECEF;
+}
+
+.check input {
+  /* height: 2em; */
+  margin-top: 4px;
+}
+
+.tab {
+  border-collapse:collapse;
+  margin-top: 1em;
+}
+
+.title {
+  background-color:#E7ECEF;
+  height: 4em;
+}
+
+.row {
+  height: 4em;
+  border-bottom: 1px solid #E7ECEF;
+}
+
+th {
+  width: 50vw;
+}
+
+td {
+  width: 50vw;
+}
+
+
+
+
