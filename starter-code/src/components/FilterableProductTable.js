@@ -7,29 +7,37 @@ class FilterableProductTable extends Component {
 
     state = {
         search: '',
-        stock: ''
+        showStockOnly: false
     }
 
-    updateTableSearch = (event) => {
+    updateTableSearch = (value) => {
+        console.log(value)
         this.setState({
-            search : event.target.value        
+            search : value        
         })
     }
 
-    updateTableStock = (event) => {
-        this.setState({
-            stock: event.target.type === 'checkbox' ? event.target.checked : event.target.value
-        })
+    updateTableStock = (value) => {
+        console.log(value)
+        if (value === true) {
+            this.setState({
+                showStockOnly: true        
+            })
+        }
+        
     }
 
 
     render() {
         console.log("FPT ", this.props);
-        const filteredProducts = this.props.products.data.filter(product => product.name.includes(this.state.search) || product.stocked === true);
+        const filteredProducts = this.props.products.data.filter(product => product.name.includes(this.state.search));
+        const filterStock = filteredProducts.filter(product => product.stocked === true);
+
+        
         return (
             <div className="FilterableProductTable"> 
-                <SearchBar updateTable={this.updateTable} value={this.state.search} />
-                <ProductTable products={filteredProducts} />
+                <SearchBar updateTableSearch={this.updateTableSearch} updateTableStock={this.updateTableStock} value={this.state.search} />
+                <ProductTable products={filterStock} />
             </div>
         );
     }
@@ -38,3 +46,5 @@ class FilterableProductTable extends Component {
 }
 
 export default FilterableProductTable;
+
+{/* <SearchBar updateTableSearch={this.updateTableSearch} updateTableStock={this.updateTableStock} value={this.state.search} /> */}

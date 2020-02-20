@@ -9,11 +9,15 @@ class SearchBar extends React.Component {
             <h3>Search</h3>
             <input className="searchbar" type="search" name="search" onChange={(event) => this.props.updateTableSearch(event.target.value)} value={this.props.search} />
             
+            
             <label>
-                <input className="check" type="checkbox" name="stock" onChange={(event) => this.props.updateTableStock(event.target.value)} value={this.props.stock} />Only show products on stock
+                <input className="check" type="checkbox" name="stock" onClick={(event) => this.props.updateTableStock(event.target.value)} />Only show products on stock
             </label>
-        </div>);
+                  
+        </div>
+        );
     }
 }
 
 export default SearchBar;   
+
